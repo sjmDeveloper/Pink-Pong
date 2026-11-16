@@ -31,7 +31,7 @@ g++ main.cpp -o ping_pong -lsfml-graphics -lsfml-window -lsfml-system
 ```
 * **On Windows (CMD):**
 ```cmd
-ping_pong
+ping_pong.exe
 ```
 
 # 4. Version
