@@ -1,38 +1,64 @@
-# 1. What is this app?
-A classic Ping Pong game built with C++ and SFML.
+# Units Converter
 
-# 2. Prerequisites & Installing SFML
-Before running the game, make sure you have **SFML** installed on your system:
+## 1. About the Project
+A lightweight desktop application built with C++ and Qt6 that converts values between different measurement units quickly and accurately (e.g., `10 kg -> 10,000 g`).
 
-* **On Linux (Ubuntu/Debian):** Install directly via terminal:
+## 2. Motivation & Features
+* **Motivation:** Created to practice and demonstrate clean, high-performance desktop application development using C++ and Qt6.
+* **Key Features:**
+  * **Instant Conversion:** Accurate calculation across multiple unit categories (Mass, Length, Temperature, etc.).
+  * **Clean Interface:** Intuitive and responsive desktop UI.
+
+## 3. Prerequisites & Installation
+Before building and running the application, ensure you have **Qt6**, **CMake**, and a C++ compiler installed:
+
+### Linux
+* **Ubuntu / Debian / Mint:**
   ```bash
-  sudo apt-get update && sudo apt-get install libsfml-dev
+  sudo apt-get update && sudo apt-get install qt6-base-dev cmake build-essential
   ```
-  *(Watch step-by-step video guide: [How to install SFML on Linux](https://youtube.com))*
+* **Fedora / RHEL / CentOS:**
+  ```bash
+  sudo dnf install qt6-qtbase-devel cmake gcc-c++
+  ```
+* **Arch Linux / Manjaro:**
+  ```bash
+  sudo pacman -S qt6-base cmake base-devel
+  ```
+* **openSUSE:**
+  ```bash
+  sudo zypper install qt6-base-devel cmake gcc-c++
+  ```
+* **Alpine Linux:**
+  ```bash
+  sudo apk add qt6-qtbase-dev cmake build-base
+  ```
+* **Other Distributions:** Install via the [Official Qt Online Installer](https://qt.io) or your distribution's package manager.
 
-* **On Windows:** Download the SDK from the [Official SFML Download Page](https://sfml-dev.org) and link it to your compiler.
-  *(Watch step-by-step video guide: [How to Setup SFML on Windows](https://youtube.com))*
+### Windows
+Download and install **Qt6** (along with MinGW and CMake) from the [Official Qt Download Page](https://qt.io).
 
-# 3. How to Use It
-1. Open your Terminal (Linux) or CMD (Windows) and navigate to the project directory:
+## 4. Build & Run
+
+### 1. Clone & Build
+Open your Terminal (Linux) or Command Prompt (Windows) and run:
 ```bash
-cd your_file_path
+git clone https://github.com
+cd Units-Converter
+mkdir build && cd build
+cmake ..
+cmake --build .
 ```
 
-2. Compile the C++ code with SFML libraries linked:
-```bash
-g++ main.cpp -o ping_pong -lsfml-graphics -lsfml-window -lsfml-system
-```
-
-3. Run the game:
+### 2. Run the Application
 * **On Linux:**
-```bash
-./ping_pong
-```
+  ```bash
+  ./UnitsConverter
+  ```
 * **On Windows (CMD):**
-```cmd
-ping_pong.exe
-```
+  ```cmd
+  UnitsConverter.exe
+  ```
 
-# 4. Version
-`1.0.1`
+## 5. Version
+`1.0.0`
