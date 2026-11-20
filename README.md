@@ -1,64 +1,62 @@
-# Units Converter
+# Ping Pong
 
 ## 1. About the Project
-A lightweight desktop application built with C++ and Qt6 that converts values between different measurement units quickly and accurately (e.g., `10 kg -> 10,000 g`).
+A classic Ping Pong arcade game built with C++ and SFML.
 
 ## 2. Motivation & Features
-* **Motivation:** Created to practice and demonstrate clean, high-performance desktop application development using C++ and Qt6.
+* **Motivation:** Created as a coding challenge to practice 2D game physics, rendering, and event handling using C++ and SFML.
 * **Key Features:**
-  * **Instant Conversion:** Accurate calculation across multiple unit categories (Mass, Length, Temperature, etc.).
-  * **Clean Interface:** Intuitive and responsive desktop UI.
+  * **Smooth Gameplay:** Real-time paddle movement and ball collision physics.
+  * **Lightweight & Fast:** Built directly with SFML graphics, window, and system modules.
 
 ## 3. Prerequisites & Installation
-Before building and running the application, ensure you have **Qt6**, **CMake**, and a C++ compiler installed:
+Before compiling and running the game, ensure you have **SFML** and a C++ compiler (`g++`) installed:
 
 ### Linux
 * **Ubuntu / Debian / Mint:**
   ```bash
-  sudo apt-get update && sudo apt-get install qt6-base-dev cmake build-essential
+  sudo apt-get update && sudo apt-get install libsfml-dev g++
   ```
 * **Fedora / RHEL / CentOS:**
   ```bash
-  sudo dnf install qt6-qtbase-devel cmake gcc-c++
+  sudo dnf install SFML-devel gcc-c++
   ```
 * **Arch Linux / Manjaro:**
   ```bash
-  sudo pacman -S qt6-base cmake base-devel
+  sudo pacman -S sfml gcc
   ```
 * **openSUSE:**
   ```bash
-  sudo zypper install qt6-base-devel cmake gcc-c++
+  sudo zypper install sfml2-devel gcc-c++
   ```
 * **Alpine Linux:**
   ```bash
-  sudo apk add qt6-qtbase-dev cmake build-base
+  sudo apk add sfml-dev g++
   ```
-* **Other Distributions:** Install via the [Official Qt Online Installer](https://qt.io) or your distribution's package manager.
+* **Other Distributions:** Download the source or SDK from the [Official SFML Download Page](https://sfml-dev.org).
 
 ### Windows
-Download and install **Qt6** (along with MinGW and CMake) from the [Official Qt Download Page](https://qt.io).
+Download the SDK from the [Official SFML Download Page](https://sfml-dev.org) and link it to your compiler (MinGW or MSVC).
 
 ## 4. Build & Run
 
-### 1. Clone & Build
+### 1. Clone & Compile
 Open your Terminal (Linux) or Command Prompt (Windows) and run:
 ```bash
 git clone https://github.com
-cd Units-Converter
-mkdir build && cd build
-cmake ..
-cmake --build .
+cd Pink-Pong
+g++ main.cpp -o ping_pong -lsfml-graphics -lsfml-window -lsfml-system
 ```
 
-### 2. Run the Application
+### 2. Run the Game
 * **On Linux:**
   ```bash
-  ./UnitsConverter
+  ./ping_pong
   ```
 * **On Windows (CMD):**
   ```cmd
-  UnitsConverter.exe
+  ping_pong.exe
   ```
 
 ## 5. Version
-`1.0.0`
+`1.0.1`
